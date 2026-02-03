@@ -33,7 +33,7 @@ def find_images(folder):
 
  # Write manifest.md5 and return how many images were listed
 def make_manifest(folder):
-    output_file = Path("manifest.md5") # set the output file name (where the manifest info will go)
+    output_file = folder / "manifest.md5" # set the output file name (where the manifest info will go)
     images = find_images(folder) # get a list of png files from the folder
 
     if len(images) == 0:
