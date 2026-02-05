@@ -23,7 +23,7 @@ def encryptFiles(imagePath):
     fernet = Fernet(key)
 
     # Open each file to be encrypted in binary read mode
-    for filename in glob.glob(os.path.join(imagePath, '*.png')):
+    for filename in glob.glob(os.path.join(imagePath, '*.png')) + glob.glob(os.path.join(imagePath, '*.md5')):
         
         with open(os.path.join(os.getcwd(), filename), 'rb') as f:
             
